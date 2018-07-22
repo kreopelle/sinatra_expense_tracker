@@ -1,2 +1,5 @@
 # ignore ssh key
 /key.txt
+
+#session_secret
+.env 
