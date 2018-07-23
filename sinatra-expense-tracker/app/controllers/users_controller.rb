@@ -11,9 +11,10 @@ class UsersController < ApplicationController
     if params[:email] == "" || params[:username] == "" || params[:password] == ""
       redirect to '/signup'
     else
+      raise params.inspect
       user = User.create(params)
       session[:user_id] = user.id
-      redirect to '/expenses'
+      redirect to('/expenses')
     end
   end
 
