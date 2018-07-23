@@ -3,8 +3,9 @@
 <h1>My Expenses</h1>
 
 <ul>
-<% Expenses.all.each do |expense| %>
+<% @expenses.each do |expense| %>
   <% if expense.user_id == @user.id %>
   <li><b><%= expense.vendor %></b> from <%= expense.date %> for $<%= expense.total%></li>
+  <% end %> 
 <% end %>
 </ul>

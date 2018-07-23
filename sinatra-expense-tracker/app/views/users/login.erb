@@ -1,1 +1,17 @@
-login
+<% if @errors %>
+  <% @errors.each do |error| %>
+  <p style="color: red;"><%= error %></p>
+  <% end %>
+<% end %>
+
+<h1>Log In!</h1>
+
+<form action="/login" method="POST">
+  <label for="username">Username:</label>
+  <input type="text" name="username" id="username"/>
+  <br></br>
+  <label for="password">Password:</label>
+  <input type="text" name="password" id="password"/>
+  <br></br>
+  <input type="submit" value="log in"/>
+</form>

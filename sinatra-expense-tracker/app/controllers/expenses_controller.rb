@@ -1,12 +1,13 @@
 class ExpensesController < ApplicationController
 
   get '/expenses' do
-    if logged_in?
-      @user == session[:user_id]
-      @expenses == Expenses.all.collect{|e| e.user_id == session[:user_id]}
+    if !session[:user_id]
+      @user = User.find_by(id: session[:user_id])
+      @expenses = Expenses.all
+      erb :'expenses/index'
     else
       redirect to('/login')
-    end 
+    end
   end
 
 end
