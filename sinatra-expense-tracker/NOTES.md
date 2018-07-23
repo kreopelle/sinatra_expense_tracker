@@ -29,3 +29,24 @@ ASSETS:
 [ ] Blog post
 [ ] Video Walkthrough
 [ ] 30 Minute Coding Session
+
+SCHEMA:
+a user has many expenses
+an expense belongs to a user
+
+a user has:
+username
+name
+email
+password
+
+an expense has:
+vendor
+description
+date
+total
+payment method
+user_id
+
+*** would like to have a view where you can view expenses by department (view all expenses in a given department)
+*** would like to have the option to upload a picture of the receipt
