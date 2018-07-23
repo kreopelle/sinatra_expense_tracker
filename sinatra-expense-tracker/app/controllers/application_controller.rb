@@ -11,4 +11,19 @@ class ApplicationController < Sinatra::Base
     erb :welcome
   end
 
+  helpers do
+    def slug
+      self.username.gsub(" ", "-")
+    end
+
+    def current_user
+      User.find{|id| session[:user_id] == user.id}
+    end
+
+    def logged_in?
+      !!session[:user_id]
+    end
+
+  end
+
 end
