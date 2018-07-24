@@ -3,7 +3,7 @@ class ExpensesController < ApplicationController
   get '/expenses' do
     if logged_in?
       @user = User.find(session[:user_id])
-      @expenses = Expenses.all
+      @expenses = Expense.all
       erb :'expenses/index'
     else
       redirect to('/login')
@@ -11,7 +11,23 @@ class ExpensesController < ApplicationController
   end
 
   get '/expenses/new' do
+    if logged_in?
+      @user = User.find(session[:user_id])
+      erb :'expenses/create_expense'
+    else
+      redirect to('/login')
+    end
+  end
 
-  end 
+  post '/expenses' do
+    @expense = Expense.new(params)
+    if !@expense.save
+      @errors = @expense.errors.full_messages
+      erb :'expenses'
+    else
+      redirect to('/expenses')
+    end
+  end
+
 
 end
