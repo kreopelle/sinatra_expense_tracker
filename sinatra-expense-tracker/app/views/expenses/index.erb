@@ -1,7 +1,7 @@
-<p>Welcome!</p>
+<p>Welcome <b><%=@user.username%></b>!</p>
 
 <h1>My Expenses</h1>
-
+<br></br>
 <ul>
   <% if @expenses.size > 0 %>
     <% @expenses.each do |expense| %>
@@ -10,6 +10,8 @@
       <% end %>
     <% end %>
   <% else %>
-    <p>You don't have any expenses recorded yet! <a href="/create_expense">Create a new one here</a>.</p>
+    <p>You don't have any expenses recorded yet! <a href="/expenses/new">Create a new one here</a>.</p>
   <% end %>
 </ul>
+
+<p><a href="/logout">Log Out</a></p>

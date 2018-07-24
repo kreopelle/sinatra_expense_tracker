@@ -3,11 +3,11 @@ TO DO:
 [X] Use ActiveRecord with Sinatra
 [X] Use Multiple Models
 [X] Use at least one has_many relationship on a User model and one belongs_to relationship on another model
-[ ] Sign up users
-[ ] Data validation for signup
-[ ] Log in users
-[ ] Data validation for login
-[ ] Log out users
+[X] Sign up users
+[X] Data validation for signup
+[X] Log in users
+[X] Data validation for login
+[X] Log out users
 [ ] Users cannot modify content created by other users
 [ ] Can create an expense that belongs to a user.
 [ ] Data validation for expense creation
@@ -50,3 +50,4 @@ user_id
 *** would like to have a view where you can view expenses by department (view all expenses in a given department)
 *** would like to have the option to upload a picture of the receipt
 *** drop first and last name columns
+*** add error message for logout

@@ -10,7 +10,6 @@ class UsersController < ApplicationController
 
   post '/signup' do
     @user = User.new(params)
-    binding.pry
     if !@user.save
       @errors = @user.errors.full_messages
       erb :'users/create_user'
@@ -40,8 +39,12 @@ class UsersController < ApplicationController
   end
 
   get '/logout' do
-
+    if logged_in?
+      session.destroy
+      erb :welcome
+    else
+      erb :welcome
+    end
   end
-
 
 end

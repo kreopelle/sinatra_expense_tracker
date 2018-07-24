@@ -10,4 +10,8 @@ class ExpensesController < ApplicationController
     end
   end
 
+  get '/expenses/new' do
+
+  end 
+
 end
