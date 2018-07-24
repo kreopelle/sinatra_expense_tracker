@@ -1,8 +1,8 @@
 class ExpensesController < ApplicationController
 
   get '/expenses' do
-    if !session[:user_id]
-      @user = User.find_by(id: session[:user_id])
+    if logged_in?
+      @user = User.find(session[:user_id])
       @expenses = Expenses.all
       erb :'expenses/index'
     else

@@ -10,6 +10,7 @@ class UsersController < ApplicationController
 
   post '/signup' do
     @user = User.new(params)
+    binding.pry
     if !@user.save
       @errors = @user.errors.full_messages
       erb :'users/create_user'
@@ -32,10 +33,14 @@ class UsersController < ApplicationController
     if user && user.authenticate(params[:password])
       session[:user_id] = user.id
       redirect to('/expenses')
-    elsif user &! User.authenticate(params[:password])
+    elsif user &! user.authenticate(params[:password])
       @errors = user.errors.full_messages
       erb :'users/login'
     end
+  end
+
+  get '/logout' do
+
   end
 
 

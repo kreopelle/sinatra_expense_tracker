@@ -1,11 +1,15 @@
-<p>Welcome, <%=@user.username%>!</p>
+<p>Welcome!</p>
 
 <h1>My Expenses</h1>
 
 <ul>
-<% @expenses.each do |expense| %>
-  <% if expense.user_id == @user.id %>
-  <li><b><%= expense.vendor %></b> from <%= expense.date %> for $<%= expense.total%></li>
-  <% end %> 
-<% end %>
+  <% if @expenses.size > 0 %>
+    <% @expenses.each do |expense| %>
+      <% if expense.user_id == @user.id %>
+      <li><b><%= expense.vendor %></b> from <%= expense.date %> for $<%= expense.total%></li>
+      <% end %>
+    <% end %>
+  <% else %>
+    <p>You don't have any expenses recorded yet! <a href="/create_expense">Create a new one here</a>.</p>
+  <% end %>
 </ul>
