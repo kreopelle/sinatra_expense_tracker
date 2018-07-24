@@ -1,6 +1,22 @@
 <h1>Create Expense</h1>
 
 <form action="/expenses" method="POST">
-  <input
+  <label for="vendor">Vendor: </label>
+  <input type="text" name="vendor" id="vendor"/>
+  <br>
+  <label for="description">Description: </label>
+  <input type="text" name="description" id="description"/>
+  <br>
+  <label for="date">Date: </label>
+  <input type="date" name="date" id="date"/>
+  <br>
+  <label for="total">Total: $</label>
+  <input type="number" name="total" id="total" min="0.01" step="0.01" max="99999999.99"/>
+  <br>
+  <label for="payment_method">Payment Method: </label>
+  <input type="text" name="payment_method" id="payment_method"/>
+  <br>
 
+  <input type="submit" value="submit"/>
+  <br>
 </form>

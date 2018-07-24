@@ -50,4 +50,5 @@ user_id
 *** would like to have a view where you can view expenses by department (view all expenses in a given department)
 *** would like to have the option to upload a picture of the receipt
 *** drop first and last name columns
-*** add error message for logout
+*** add error message for logout\
+*** add radio buttons for accepted payment methods: Company card, cash, personal card, check
