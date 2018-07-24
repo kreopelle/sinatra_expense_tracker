@@ -7,11 +7,13 @@
     <% @expenses.each do |expense| %>
       <% if expense.user_id == @user.id %>
       <li><b><%= expense.vendor %></b> from <%= expense.date %> for $<%= expense.total%></li>
+      <br></br>
       <% end %>
     <% end %>
+    <a href="/expenses/new">Create new expense</a>
   <% else %>
     <p>You don't have any expenses recorded yet! <a href="/expenses/new">Create a new one here</a>.</p>
   <% end %>
 </ul>
-
+<br></br>
 <p><a href="/logout">Log Out</a></p>

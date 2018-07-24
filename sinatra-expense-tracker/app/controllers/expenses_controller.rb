@@ -29,5 +29,19 @@ class ExpensesController < ApplicationController
     end
   end
 
+  get '/expenses/:id' do
+    
+  end
+
+  patch '/expenses/:id' do
+    @expense =
+    if !@expense.save
+      @errors = @expense.errors.full_messages
+      erb :'expenses'
+    else
+      redirect to('/expenses')
+    end
+  end
+
 
 end
