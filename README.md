@@ -6,7 +6,7 @@ This web app was created as part of the [Flatiron School's Online Web Developer 
 
 ## Install Instructions
 
-Visit the [Sinatra Expense Tracker](#) site to begin using the app.
+Visit [Sinatra Expense Tracker](https://sinatra-expense-tracker.herokuapp.com/) to begin using the app.
 
 Alternatively, clone this repo, run `bundle install`, `rake db:migrate`, and then run `shotgun`.
 
