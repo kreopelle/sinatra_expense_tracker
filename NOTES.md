@@ -16,15 +16,15 @@ TO DO:
 [X] Data validation for expense modification
 [X] Can destroy an expense that belongs to the user.
 [X] User's expenses can be edited or deleted only by that user
-[ ] Add spec.md file from project page & check boxes
-[ ] Write README.md
-  [ ] short description
-  [ ] install instructions
-  [ ] contributor's guide
-  [ ] link to license
+[X] Add spec.md file from project page & check boxes
+[X] Write README.md
+  [X] short description
+  [X] install instructions
+  [X] contributor's guide
+  [X] link to license
 
 ASSETS:
-[ ] Github repository
+[X] Github repository
 [ ] Blog post
 [ ] Video Walkthrough
 [X] 30 Minute Coding Session
@@ -35,7 +35,7 @@ an expense belongs to a user
 
 a user has:
 username
-name
+name --> started with this, but eventually took it out. next time will probably use the combination of a name to greet the user and an email / password combination to log in
 email
 password
 
@@ -44,12 +44,9 @@ vendor
 description
 date
 total
-payment method
+payment method --> started with this, but eventually took it out. next time will want a payment method class that has set options that need to be selected with radio buttons
 user_id
 
+FUTURE EXPANSION IDEAS:
 *** would like to have a view where you can view expenses by department (view all expenses in a given department)
 *** would like to have the option to upload a picture of the receipt
-*** drop first and last name columns
-*** add error message for logout\
-*** add radio buttons for accepted payment methods: Company card, cash, personal card, check
-*** make sure that the totals always have two decimal points (add the zero)
