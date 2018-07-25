@@ -2,32 +2,32 @@
 
 <% if @errors %>
   <% @errors.each do |error| %>
-  <p style="color: red;"><%= error %></p>
+    <p style="color: red;"><%= error %></p>
   <% end %>
 <% end %>
 
 <br></br>
 
-<form action="/expenses/<%=@expense.id%>" method="POST">
+<form action="/expenses/<%= @expense.id %>" method="POST">
   <input type="hidden" id="hidden" name="_method" value="patch"/>
 
   <label for="vendor">Vendor: </label>
-  <input type="text" name="vendor" id="vendor" value="<%=@expense.vendor %>"/>
+  <input type="text" name="vendor" id="vendor" value="<%= @expense.vendor %>"/>
 
   <br></br>
 
   <label for="date">Date: </label>
-  <input type="date" name="date" id="date" min="2014-01-01" max="2029-12-31" value="<%=@expense.date %>"/>
+  <input type="date" name="date" id="date" min="2014-01-01" max="2029-12-31" value="<%= @expense.date %>"/>
 
   <br></br>
 
   <label for="total">Total:  $</label>
-  <input type="number" name="total" id="total" min="0.01" step="0.01" max="9999.99" value="<%=@expense.total %>"/>
+  <input type="number" name="total" id="total" min="0.01" step="0.01" max="9999.99" value="<%= @expense.total %>"/>
 
   <br></br>
 
   <label for="description">Description: </label>
-  <input type="text" name="description" id="description" value="<%=@expense.description %>"/>
+  <input type="text" name="description" id="description" value="<%= @expense.description %>"/>
 
   <br></br>
 
