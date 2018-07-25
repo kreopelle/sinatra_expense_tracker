@@ -3,7 +3,6 @@ html, body {
   height: 100%;
 }
 
-/* --- Welcome Page Styles --- */
 body {
   font-family: Sans-Serif;
   line-height: 18px;
@@ -34,4 +33,3 @@ footer {
   margin-top: 20px;
   padding-top: 20px;
 }
-
