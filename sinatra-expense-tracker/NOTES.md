@@ -52,3 +52,4 @@ user_id
 *** drop first and last name columns
 *** add error message for logout\
 *** add radio buttons for accepted payment methods: Company card, cash, personal card, check
+*** make sure that the totals always have two decimal points (add the zero)

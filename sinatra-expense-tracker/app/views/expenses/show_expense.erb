@@ -3,16 +3,14 @@
 
 <h2><%= @expense.vendor %></h2>
 <br>
-<h3>Date: <%= @expense.date %></h3>
+<p><b>Date:</b> <%= @expense.date %></p>
+<p><b>Total:</b> $<%= @expense.total %></p>
+<p><b>Description:</b> <%= @expense.description %></p>
+<p><b>Payment Method:</b> <%= @expense.payment_method %></p>
 <br>
-<h3>Total: $<%= @expense.total %></h3>
-<br>
-<h3>Description: <%= @expense.description %></h3>
-<br>
-<h3>Payment Method: <%= @expense.payment_method %></h3>
-<br>
+<a href="/expenses/">Return to All Expenses</a>
 <a href="/expenses/<%= @expense.id %>/edit">Edit Expense</a>
-<br>
+<br></br>
 <form action="/expenses/<%= @expense.id %>/delete" method="POST">
   <input type="hidden" id="hidden" name="_method" value="DELETE"/>
   <input type="submit" value="Delete Expense">
