@@ -11,10 +11,10 @@ Specs:
 - [X] Ensure that the belongs_to resource has routes for Creating, Reading, Updating and Destroying
 - [X] Include user input validations
 - [X] Display validation failures to user with error message (example form URL e.g. /posts/new)
-- [ ] Your README.md includes a short description, install instructions, a contributors guide and a link to the license for your code
+- [X] Your README.md includes a short description, install instructions, a contributors guide and a link to the license for your code
 
 Confirm
-- [ ] You have a large number of small Git commits
+- [X] You have a large number of small Git commits
 - [X] Your commit messages are meaningful
 - [X] You made the changes in a commit that relate to the commit message
-- [ ] You don't include changes in a commit that aren't related to the commit message
+- [X] You don't include changes in a commit that aren't related to the commit message
