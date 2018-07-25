@@ -1,5 +1,9 @@
 <p>Welcome <b><%=@user.username%></b>!</p>
 
+<% if @errors %>
+  <p style="color: red;"><%= @errors %></p>
+<% end %>
+
 <h1>My Expenses</h1>
 <br>
 <ul>

@@ -24,7 +24,7 @@ class ExpensesController < ApplicationController
       @user = current_user
       @expense = Expense.new(params)
       if !@expense.save
-        @errors = @expense.errors.full_messages
+        @errors = sinatra.errors.full_messages
         erb :'/expenses/create_expense'
       else
         redirect to('/expenses')
