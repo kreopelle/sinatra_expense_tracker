@@ -1,5 +1,11 @@
 <h1>Create New Expense</h1>
 
+<% if @errors %>
+  <% @errors.each do |error| %>
+  <p style="color: red;"><%= error %></p>
+  <% end %>
+<% end %>
+
 <br></br>
 
 <form action="/expenses" method="POST">
@@ -30,7 +36,7 @@
 
   <input type="hidden" name="user_id" value="<%=@user.id%>"/>
 
-  <input type="submit" value="create expense"/>
+  <input type="submit" value="Create Expense"/>
 
   <br></br>
 </form>

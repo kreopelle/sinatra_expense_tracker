@@ -3,7 +3,7 @@ class ExpensesController < ApplicationController
   get '/expenses' do
     if logged_in?
       @user = User.find(session[:user_id])
-      @expenses = Expense.all
+      @expenses = @user.expenses
       erb :'expenses/index'
     else
       redirect to('/login')
@@ -20,18 +20,23 @@ class ExpensesController < ApplicationController
   end
 
   post '/expenses' do
-    @expense = Expense.new(params)
-    if !@expense.save
-      @errors = @expense.errors.full_messages
-      redirect to('/expenses')
+    if logged_in?
+      @user = User.find(session[:user_id])
+      @expense = Expense.new(params)
+      if !@expense.save
+        @errors = @expense.errors.full_messages
+        erb :'/expenses/create_expense'
+      else
+        redirect to('/expenses')
+      end
     else
-      redirect to('/expenses')
+      redirect to('/login')
     end
   end
 
   get '/expenses/:id' do
-    if logged_in?
-      @expense = Expense.find(params[:id])
+    @expense = Expense.find(params[:id])
+    if logged_in? && @expense.user_id == session[:user_id]
       erb :'expenses/show_expense'
     else
       redirect to('/login')
@@ -57,7 +62,7 @@ class ExpensesController < ApplicationController
     @expense.payment_method = params[:payment_method]
     if !@expense.save
       @errors = @expense.errors.full_messages #can't seem to have errors printed to console, but redirects properly?
-      redirect to("/expenses/#{@expense.id}/edit")
+      erb :'/expenses/update_expense'
     else
       redirect to("/expenses/#{@expense.id}")
     end
@@ -71,6 +76,6 @@ class ExpensesController < ApplicationController
     else
       redirect to('/login')
     end
-  end 
+  end
 
 end
