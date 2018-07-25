@@ -13,7 +13,7 @@
 <br>
 <a href="/expenses/<%= @expense.id %>/edit">Edit Expense</a>
 <br>
-<form action="/expenses" method="POST">
+<form action="/expenses/<%= @expense.id %>/delete" method="POST">
   <input type="hidden" id="hidden" name="_method" value="DELETE"/>
   <input type="submit" value="Delete Expense">
 </form>
