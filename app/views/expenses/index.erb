@@ -6,8 +6,8 @@
   <% if @expenses.size > 0 %>
     <% @expenses.each do |expense| %>
       <% if expense.user_id == @user.id %>
-      <li><a href="/expenses/<%= expense.id %>"><b><%= expense.vendor %></b></a> from <%= expense.date %> for $<%= "%.2f" % expense.total %></li>
-      <br></br>
+        <li><a href="/expenses/<%= expense.id %>"><b><%= expense.vendor %></b></a> from <%= expense.date %> for $<%= "%.2f" % expense.total %></li>
+        <br></br>
       <% end %>
     <% end %>
     <a href="/expenses/new">Create new expense</a>
