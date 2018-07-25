@@ -2,7 +2,7 @@
 
 <% if @errors %>
   <% @errors.each do |error| %>
-  <p style="color: red;"><%= error %></p>
+    <p style="color: red;"><%= error %></p>
   <% end %>
 <% end %>
 
@@ -32,6 +32,4 @@
   <input type="hidden" name="user_id" value="<%=@user.id%>"/>
 
   <input type="submit" value="Create Expense"/>
-
-  <br></br>
 </form>
