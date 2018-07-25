@@ -1,5 +1,11 @@
 <h1>Edit Expense</h1>
 
+<% if @errors %>
+  <% @errors.each do |error| %>
+  <p style="color: red;"><%= error %></p>
+  <% end %>
+<% end %>
+
 <br></br>
 
 <form action="/expenses/<%=@expense.id%>" method="POST">
