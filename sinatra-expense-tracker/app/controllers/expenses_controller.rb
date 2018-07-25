@@ -48,7 +48,7 @@ class ExpensesController < ApplicationController
     @expense.total = params[:total]
     @expense.payment_method = params[:payment_method]
     if !@expense.save
-      @errors = @expense.errors.full_messages #can't seem to have errors printed to console?
+      @errors = @expense.errors.full_messages #can't seem to have errors printed to console, but redirects properly? 
       redirect to("/expenses/#{@expense.id}/edit")
     else
       redirect to("/expenses/#{@expense.id}")
