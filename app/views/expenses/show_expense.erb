@@ -1,17 +1,26 @@
 <h1>Expense Details</h1>
+
 <br></br>
 
 <h2><%= @expense.vendor %></h2>
+
 <br>
+
 <p><b>Date:</b> <%= @expense.date %></p>
 <p><b>Total:</b> $<%= "%.2f" % @expense.total %></p>
 <p><b>Description:</b> <%= @expense.description %></p>
+
 <br>
+
 <a href="/expenses/<%= @expense.id %>/edit">Edit Expense</a>
+
 <br></br>
+
 <form action="/expenses/<%= @expense.id %>/delete" method="POST">
   <input type="hidden" id="hidden" name="_method" value="DELETE"/>
   <input type="submit" value="Delete Expense">
 </form>
+
 <br></br>
+
 <a href="/expenses">View All Expenses</a>
