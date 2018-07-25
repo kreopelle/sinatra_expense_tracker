@@ -17,6 +17,7 @@ group :development do
   gem 'shotgun'
   gem 'pry'
   gem "tux"
+  gem 'dotenv'
 end
 
 group :test do
