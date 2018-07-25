@@ -59,7 +59,6 @@ class ExpensesController < ApplicationController
     @expense.description = params[:description]
     @expense.date = params[:date]
     @expense.total = params[:total]
-    @expense.payment_method = params[:payment_method]
     if !@expense.save
       @errors = @expense.errors.full_messages
       erb :'/expenses/update_expense'
