@@ -8,14 +8,14 @@ TO DO:
 [X] Log in users
 [X] Data validation for login
 [X] Log out users
-[ ] Users cannot modify content created by other users
-[ ] Can create an expense that belongs to a user.
-[ ] Data validation for expense creation
-[ ] Can read an expense that belongs to a user.
-[ ] Can update an expense that belongs to a user.
-[ ] Data validation for expense modification
-[ ] Can destroy an expense that belongs to a user.
-[ ] User's expenses can be edited or deleted only by that user
+[X] Users cannot modify content created by other users
+[X] Can create an expense that belongs to the user.
+[X] Data validation for expense creation
+[X] Can read an expense that belongs to the user.
+[X] Can update an expense that belongs to the user.
+[X] Data validation for expense modification
+[X] Can destroy an expense that belongs to the user.
+[X] User's expenses can be edited or deleted only by that user
 [ ] Add spec.md file from project page & check boxes
 [ ] Write README.md
   [ ] short description
@@ -27,7 +27,7 @@ ASSETS:
 [ ] Github repository
 [ ] Blog post
 [ ] Video Walkthrough
-[ ] 30 Minute Coding Session
+[X] 30 Minute Coding Session
 
 SCHEMA:
 a user has many expenses
