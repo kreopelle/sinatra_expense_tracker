@@ -16,7 +16,7 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/kreope
 
 ## Code of Conduct
 
-Everyone interacting in the Sinatra Expense Tracker's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/'kreopelle'/sinatra_expense_tracker/blob/master/CODE_OF_CONDUCT.md).
+Everyone interacting in the Sinatra Expense Tracker's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/kreopelle/sinatra_expense_tracker/blob/master/CODE_OF_CONDUCT.md).
 
 ## License
 
