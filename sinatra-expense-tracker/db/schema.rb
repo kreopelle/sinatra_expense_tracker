@@ -11,21 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180722234221) do
+ActiveRecord::Schema.define(version: 20180725145800) do
 
   create_table "expenses", force: :cascade do |t|
     t.string  "vendor"
     t.string  "description"
     t.date    "date"
-    t.decimal "total",          precision: 10, scale: 2
-    t.string  "payment_method"
+    t.decimal "total",       precision: 10, scale: 2
     t.integer "user_id"
   end
 
   create_table "users", force: :cascade do |t|
     t.string "username"
-    t.string "first_name"
-    t.string "last_name"
     t.string "email"
     t.string "password_digest"
   end
