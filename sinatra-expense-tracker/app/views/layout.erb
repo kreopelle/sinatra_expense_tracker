@@ -19,9 +19,12 @@
         <%= yield %>
 
       <footer class="branding">
-        <small>&copy; 2018 <strong>SinatraExpenseTracker</strong></small>
+        <small>&copy; 2018 <strong>SinatraExpenseTracker</strong></small> /
         <% if logged_in? %>
           <small><strong><a href="/logout">Log Out</a></strong></small>
+        <% else %>
+          <small><strong><a href="/login">Log In</a></strong></small> /
+          <small><strong><a href="/login">Sign Up</a></strong></small>
         <% end %>
       </footer>
     </div>
