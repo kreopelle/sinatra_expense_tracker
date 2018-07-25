@@ -44,7 +44,8 @@ class ExpensesController < ApplicationController
   end
 
   get '/expenses/:id/edit' do
-    if logged_in?
+    @expense = Expense.find(params[:id])
+    if logged_in? && @expense.user_id == session[:user_id]
       @expense = Expense.find(params[:id])
       @user = User.find(session[:user_id])
       erb :'expenses/update_expense'
@@ -68,8 +69,8 @@ class ExpensesController < ApplicationController
   end
 
   delete '/expenses/:id/delete' do
-    if logged_in?
-      @expense = Expense.find(params[:id])
+    @expense = Expense.find(params[:id])
+    if logged_in? && @expense.user_id == session[:user_id]
       @expense.destroy
       redirect to('/expenses')
     else

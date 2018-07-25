@@ -10,13 +10,14 @@ class ApplicationController < Sinatra::Base
   end
 
   get "/" do
-    erb :welcome
+    if logged_in?
+      redirect to('/expenses')
+    else
+      erb :welcome
+    end
   end
 
   helpers do
-    def slug
-      self.username.gsub(" ", "-")
-    end
 
     def current_user
       User.find{|id| session[:user_id] == user.id}
