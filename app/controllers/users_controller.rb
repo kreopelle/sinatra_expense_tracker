@@ -43,7 +43,7 @@ class UsersController < ApplicationController
       session.destroy
       redirect to('/')
     else
-      erb :welcome
+      rediect to('/')
     end
   end
 
