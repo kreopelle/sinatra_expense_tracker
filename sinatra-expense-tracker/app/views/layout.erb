@@ -14,12 +14,15 @@
     <link rel="stylesheet" href="/stylesheets/main.css" />
   </head>
   <body>
-    <div class="wrapper">
+    <div>
 
         <%= yield %>
 
       <footer class="branding">
         <small>&copy; 2018 <strong>SinatraExpenseTracker</strong></small>
+        <% if logged_in? %>
+          <small><strong><a href="/logout">Log Out</a></strong></small>
+        <% end %>
       </footer>
     </div>
 
