@@ -2,8 +2,7 @@ class ExpensesController < ApplicationController
 
   get '/expenses' do
     if logged_in?
-      @user = current_user
-      @expenses = @user.expenses
+      @expenses = current_user.expenses
       erb :'expenses/index'
     else
       redirect to('/login')
@@ -21,10 +20,9 @@ class ExpensesController < ApplicationController
 
   post '/expenses' do
     if logged_in?
-      @user = current_user
-      @expense = Expense.new(params)
+      @expense = current_user.Expense.build(params)
       if !@expense.save
-        @errors = sinatra.errors.full_messages
+        @errors = @expense.errors.full_messages
         erb :'/expenses/create_expense'
       else
         redirect to('/expenses')
