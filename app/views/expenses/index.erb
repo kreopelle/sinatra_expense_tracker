@@ -1,4 +1,4 @@
-<p>Welcome <b><%=@user.username%></b>!</p>
+<p>Welcome <b><%= @current_user.username%></b>!</p>
 
 <% if @errors %>
   <p style="color: red;"><%= @errors %></p>
@@ -9,13 +9,13 @@
 <ul>
   <% if @expenses.size > 0 %>
     <% @expenses.each do |expense| %>
-      <% if expense.user_id == @user.id %>
+      <% if expense.user_id == @current_user.id %>
         <li><a href="/expenses/<%= expense.id %>"><b><%= expense.vendor %></b></a> from <%= expense.date %> for $<%= "%.2f" % expense.total %></li>
         <br></br>
       <% end %>
     <% end %>
     <a href="/expenses/new">Create new expense</a>
   <% else %>
-    <p>You don't have any expenses recorded yet! <a href="/expenses/new">Create a new one here</a>.</p>
+    <p>You don't have any recorded expenses! <a href="/expenses/new">Create a new one here</a>.</p>
   <% end %>
 </ul>

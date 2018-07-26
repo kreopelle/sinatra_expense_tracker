@@ -11,7 +11,7 @@ class ExpensesController < ApplicationController
 
   get '/expenses/new' do
     if logged_in?
-      @user = current_user
+      @current_user
       erb :'expenses/create_expense'
     else
       redirect to('/login')
@@ -20,7 +20,7 @@ class ExpensesController < ApplicationController
 
   post '/expenses' do
     if logged_in?
-      @expense = current_user.Expense.build(params)
+      @expense = current_user.expenses.build(params)
       if !@expense.save
         @errors = @expense.errors.full_messages
         erb :'/expenses/create_expense'
