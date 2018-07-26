@@ -28,6 +28,9 @@ p {
   margin-bottom: 18px;
 }
 
+a, a:visited, a:hover, a:active {
+  color: #2F9296;
+}
 
 footer {
   margin-top: 20px;
