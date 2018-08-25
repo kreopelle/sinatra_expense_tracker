@@ -33,7 +33,7 @@ If you'd like to learn more about securing and deploying heroku apps, visit the 
 
 ## Contributors Guide
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/kreopelle/asana_cli_gem. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/kreopelle/sinatra_expense_tracker. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 ## Code of Conduct
 
