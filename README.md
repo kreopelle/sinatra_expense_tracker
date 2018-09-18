@@ -10,7 +10,7 @@ This app could be used for:
 
 This project was created as part of the [Flatiron School's Online Web Developer program](https://flatiron-school.com).
 
-For more information about how the project was created, visit [my blog](https://kreopelle.github.io/embrace_the_process_my_sinatra_project).
+For more information about how the project was created, visit [my blog](https://kreopelle.github.io/embrace_the_process_my_sinatra_project) and watch the demo video[demo video](https://youtu.be/AeZnK6YvvwI).
 
 ## Install Instructions
 
